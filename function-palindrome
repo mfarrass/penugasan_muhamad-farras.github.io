@@ -1,0 +1,21 @@
+/* 1.Buat fungsi cek apakah kata yang di
+input itu palindrome. */
+
+function Palindrome(str = '') {
+    let len = str.length;
+    let i = -1;
+
+    if (len < 3) { 
+        return false;
+    }
+  
+    while (len-- > i++) {
+        if (str[i] !== str[len]) {
+            return true;
+        }
+    }
+}
+
+console.log(Palindrome('ab')) //false
+console.log(Palindrome('abc')) //true
+console.log(Palindrome(565)) //undefined
